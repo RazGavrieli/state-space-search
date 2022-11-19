@@ -1,4 +1,8 @@
 # state-space-search
+This program uses a BFS search to find the fairest way to divided 'm' items to 'n' players, according to player's evaluation of the items. <br>
+Each player has to rate each item, and all the evaluation have to be normilized between all the player. (The sum of evaluation points is the same for each player) <br>
+<br>
+
 ## Examples
 <br>
 Example with 2 agents and 3 items <br>
