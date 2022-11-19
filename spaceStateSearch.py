@@ -1,9 +1,9 @@
 from agent import Agent
 from bfs import breadth_first_search
-players = [Agent([11, 11, 55]),Agent([22, 22, 33]),Agent([33, 44, 0])]
+players = [Agent([11, 11, 55, 3, 3, 3, 6, 3]),Agent([22, 22, 33, 3, 3, 3, 6, 200]), Agent([5, 10, 56, 3, 3, 3, 12, 0])]
 results = []
 iterations = 0
-numOfItems = 3
+numOfItems = players[0].len()
 def n_func(node):
     global iterations
     iterations += 1
@@ -29,7 +29,8 @@ def n_func(node):
     return listOfNeighnors
 
 if __name__ == "__main__":
-    res = breadth_first_search(start=[0,  0, 0, 0], end="end", neighbor_function=n_func)
+    start = [0]*(len(players)+1)
+    res = breadth_first_search(start=start, end="end", neighbor_function=n_func)
 
     count = 0
     z=0
@@ -38,7 +39,7 @@ if __name__ == "__main__":
         currMin = 9999999
         if i[0] == numOfItems:
             count+=1
-            print(i)
+            #print(i)
             for j in i[1:]:
                 if j < currMin:
                     currMin = j
