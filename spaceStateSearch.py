@@ -8,6 +8,10 @@ iterations = 0
 numOfItems = players[0].len()
 
 def n_func(node):
+    """
+    This function is the neighbor function that calculates all the possible ways of giving an item to a player from the current state(current node).
+    In order to function, it must have a 'players' list (list(Agent)), results dictionary, and iteration counter(integer). 
+    """
     global iterations
     iterations += 1
     if node[0] == players[0].len():
