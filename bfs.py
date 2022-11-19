@@ -46,9 +46,9 @@ def breadth_first_search(start, end, neighbor_function):
     ...
     Exception: could not find destination node
     """
-    visited = []    # List for visited nodes.
+    visited = {}    # List for visited nodes.
     queue = []      # Initialize a queue
-    visited.append(start)
+    visited[tuple(start)] = start
     queue.append([start])
 
     while queue:          # Creating loop to visit each node
@@ -57,8 +57,8 @@ def breadth_first_search(start, end, neighbor_function):
         if node == end: # This causes the search to stop whenever we find the destination
             return path
         for neighbour in neighbor_function(node):
-            if neighbour not in visited: # This causes the search to stop if we can't find the end
-                visited.append(neighbour)
+            if tuple(neighbour) not in visited.keys(): # This causes the search to stop if we can't find the end
+                visited[tuple(neighbour)] = neighbour
                 new_path = list(path)
                 new_path.append(neighbour)
                 queue.append(new_path)
