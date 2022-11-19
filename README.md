@@ -22,4 +22,4 @@ players: <br>
 Example with 6 agents and 6 items <br>
 players: <br>
 [Agent([11, 11, 55, 30, 42, 50]),Agent([22, 22, 33, 122, 0 ,0]),Agent([33, 44, 0, 50, 70, 2]),Agent([33, 44, 0, 50, 70, 2]),Agent([33, 44, 0, 50, 70, 2]),Agent([18, 44, 15, 50, 70, 2])]
-<img width="475" alt="image" src="https://user-images.githubusercontent.com/90526270/202852731-a11cfe2f-bbff-4a62-859b-26734a76aa76.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/90526270/202852881-0d65edbd-4a53-4ea8-83cf-3fea3dcd3ebb.png">
